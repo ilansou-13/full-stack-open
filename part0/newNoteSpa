@@ -1,0 +1,19 @@
+sequenceDiagram
+    
+    participant user
+    participant browser
+    participant server
+
+    user->>browser: Write note and click Save button
+
+    Note right of browser: The browser executes JavaScript to handle the form submission
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    Note right of server: Server processes the new note and saves it
+
+    server-->>browser: 201 Created, { "content": "New note", "date": "2024-6-12" }
+    deactivate server
+
+    Note right of browser: The browser updates the note list in the DOM without a page reload
+    browser->>browser: Update the notes list in the UI with the new note
