@@ -1,0 +1,18 @@
+.notification {
+  font-size: 20px;
+  width: 40%;
+  background-color: hsla(0, 0%, 85%, 0.7);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.notification.success {
+  color: green;
+  border: 5px solid green;
+}
+
+.notification.error {
+  color: red;
+  border: 5px solid red;
+}
